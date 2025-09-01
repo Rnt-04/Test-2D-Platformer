@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://62tedrqp8tfp"]
+
+[ext_resource type="Script" uid="uid://die4lyy01cwtl" path="res://scripts/main.gd" id="1_4lck5"]
+[ext_resource type="Texture2D" uid="uid://b5koalq1y6215" path="res://assets/Green.png" id="1_jii3v"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_4lck5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 640.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_jii3v")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="tutorial" type="Button" parent="."]
+offset_left = 534.0
+offset_top = 292.0
+offset_right = 662.0
+offset_bottom = 348.0
+theme_override_colors/font_hover_color = Color(0.992157, 0, 0, 1)
+text = "PLAY TUTORIAL"
+
+[node name="start" type="Button" parent="."]
+offset_left = 531.0
+offset_top = 372.0
+offset_right = 659.0
+offset_bottom = 428.0
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+text = "START"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 461.0
+offset_top = 234.0
+offset_right = 766.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "A test project by RNT"
+
+[connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
